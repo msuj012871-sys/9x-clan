@@ -152,7 +152,7 @@ async def ensure_token(region):
     await create_jwt(region)
     return jwt_tokens.get(region)
 # ===================== CLAN INFO ROUTE (SYNC) =====================
-@app.route('/info', methods=['GET'])
+@app.route('/guild', methods=['GET'])
 def get_clan_info():
     clan_id = request.args.get('clan_id')
     region = request.args.get('region', 'IND').upper()
